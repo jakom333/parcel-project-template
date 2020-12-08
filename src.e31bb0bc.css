@@ -288,6 +288,10 @@ img {
     align-items: center;
   }
 }
+.hero .container {
+  position: relative;
+}
+
 .hero {
   padding-bottom: 92px;
   background-image: url("/mobile-hero-bg.12c80dbd.png");
@@ -552,7 +556,14 @@ img {
   color: #ff6b09;
 }
 
-.challenges-list {
+.absolute-list {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  transform: translateY(50%);
+  width: 100%;
+}
+.absolute-list .challenges-list {
   padding-left: 30px;
   padding-right: 14px;
   padding-top: 20px;
@@ -560,10 +571,10 @@ img {
   background-color: #ffffff;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
-.challenges-list-item:not(:last-child) {
+.absolute-list .challenges-list-item:not(:last-child) {
   margin-bottom: 10px;
 }
-.challenges-list-item-order {
+.absolute-list .challenges-list-item-order {
   color: #ff6b09;
   font-size: 20px;
   font-weight: 700;
@@ -572,7 +583,7 @@ img {
   display: flex;
   align-items: center;
 }
-.challenges-list-item-order::before {
+.absolute-list .challenges-list-item-order::before {
   content: "";
   display: inline-block;
   margin-right: 6px;
@@ -580,19 +591,19 @@ img {
   height: 1px;
   background-color: #ff6b09;
 }
-.challenges-list-item-text {
+.absolute-list .challenges-list-item-text {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.429;
 }
 
-.challengees-list-item:hover .challengees-list-item-order {
-  transform: scale(1.5);
+.section-position {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1399px) {
   .challenges {
-    padding-top: 57x;
+    padding-top: 57px;
     padding-bottom: 180px;
   }
   .challenges-title {
@@ -603,7 +614,11 @@ img {
     margin-bottom: 30px;
   }
 
-  .challenges-list {
+  .absolute-list {
+    position: absolute;
+    top: 50px;
+  }
+  .absolute-list .challenges-list {
     padding-left: 96px;
     padding-right: 46px;
     padding-top: 30px;
@@ -613,19 +628,19 @@ img {
     justify-content: space-between;
     margin: -11px -11px;
   }
-  .challenges-list-item {
+  .absolute-list .challenges-list-item {
     width: calc((100% - 4 * 11px) / 2);
     margin: 11px 11px;
     max-width: 245px;
   }
-  .challenges-list-item-order {
+  .absolute-list .challenges-list-item-order {
     color: #ff6b09;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.214;
     margin-bottom: 5px;
   }
-  .challenges-list-text {
+  .absolute-list .challenges-list-text {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.429;
@@ -634,8 +649,7 @@ img {
 @media screen and (min-width: 1400px) {
   .challenges {
     padding-top: 100px;
-    padding-left: 183px;
-    padding-right: auto;
+    padding-bottom: 282px;
     background-image: url(/bg-challengees.704fa4be.png);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -648,28 +662,33 @@ img {
     max-width: 850px;
   }
 
-  .challenges-list {
-    padding-left: 80px;
-    padding-right: 80px;
+  .absolute-list {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 35%);
+  }
+  .absolute-list .challenges-list {
+    padding-left: 114px;
+    padding-right: 112px;
     padding-top: 70px;
     padding-bottom: 62px;
     display: flex;
     flex-wrap: wrap;
     margin: -16px -12px;
   }
-  .challenges-list-item {
+  .absolute-list .challenges-list-item {
     width: calc((100% - 6 * 12px) / 3);
     margin: 16px 12px;
     max-width: 350px;
   }
-  .challenges-list-item-order {
+  .absolute-list .challenges-list-item-order {
     color: #ff6b09;
     font-size: 20px;
     font-weight: 700;
     line-height: 1.65;
     margin-bottom: 10px;
   }
-  .challenges-list-item-text {
+  .absolute-list .challenges-list-item-text {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
@@ -677,8 +696,7 @@ img {
 }
 .solutions {
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  padding-top: 195px;
 }
 
 .solutions-title {
@@ -700,7 +718,7 @@ img {
   color: #111518;
   text-align: center;
   margin: 0px auto;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-list-item-text {
@@ -709,7 +727,7 @@ img {
   line-height: 1.667;
   letter-spacing: 0.08em;
   color: #b9b9b9;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-list-item:hover,
@@ -728,7 +746,7 @@ img {
   padding-top: 30px;
   background: #ffffff;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-list-item-svg {
@@ -737,8 +755,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.solutions-list-item-svg:hover,
-.solutions-list-item-svg:focus {
+.solutions-list-item-svg:hover {
   fill: #ffffff;
 }
 
@@ -760,7 +777,7 @@ img {
   letter-spacing: 0.08em;
   margin-top: 5px;
   margin-bottom: 5px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 320px) {
@@ -781,6 +798,10 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
+  .solutions {
+    padding-top: 160px;
+  }
+
   .solutions-list {
     display: flex;
     flex-direction: row;
@@ -834,8 +855,7 @@ img {
     line-height: 1.304;
     text-align: left;
     padding: 0;
-    max-width: 866px;
-    margin-right: auto;
+    max-width: 100%;
   }
 
   .solutions-list-item-title {
@@ -954,6 +974,13 @@ img {
   right: -20px;
 }
 
+.choose {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  width: 100%;
+  transform: translateY(50%);
+}
 .choose-title {
   width: 180px;
   margin-bottom: 30px;
@@ -970,7 +997,6 @@ img {
 }
 .choose-list-item {
   margin-bottom: 20px;
-  max-width: 236px;
 }
 .choose-list-item-title {
   display: flex;
@@ -994,6 +1020,10 @@ img {
   font-weight: 700;
   line-height: 1.429;
   color: #111518;
+}
+
+.choose-position {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1399px) {
@@ -1031,6 +1061,9 @@ img {
     right: -12px;
   }
 
+  .choose {
+    bottom: 50px;
+  }
   .choose-title {
     font-size: 26px;
     font-weight: 800;
@@ -1128,6 +1161,9 @@ img {
     left: -183px;
   }
 
+  .choose {
+    bottom: 40px;
+  }
   .choose-title {
     display: none;
   }
@@ -1153,7 +1189,7 @@ img {
   }
 }
 .teacher {
-  padding-top: 39px;
+  padding-top: 200px;
   padding-bottom: 50px;
 }
 
@@ -1249,6 +1285,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .teacher {
+    padding-top: 250px;
+  }
+
   .position {
     display: flex;
   }
@@ -1468,7 +1508,7 @@ img {
 }
 .feedbacks {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1526,7 +1566,7 @@ img {
   width: 25px;
   height: 15px;
   position: absolute;
-  bottom: 20px;
+  bottom: 70px;
   border: 3px solid #ff6b09;
   box-sizing: border-box;
   cursor: pointer;
@@ -1581,7 +1621,7 @@ img {
   font-weight: 500;
   line-height: 1.667;
   text-align: center;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
   color: #3d3d3d;
 }
 
@@ -1598,12 +1638,6 @@ img {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .feedbacks-student-about,
-.feedbacks-student-about-text {
-    margin: 0 20px;
-  }
-}
 @media screen and (min-width: 768px) {
   .feedbacks-title {
     width: 100%;
