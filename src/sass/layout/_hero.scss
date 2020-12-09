@@ -123,14 +123,7 @@
 
 .primary-button.hero-button {
   margin: 30px auto;
-  min-width: 260px;
-  min-height: 48px;
   padding: 12px;
-  background-color: $accent-color;
-  color: $white-color;
-  border: none;
-  text-transform: uppercase;
-  line-height: inherit;
 
   @media screen and (min-width: 768px) {
     margin: 30px auto 0 0;
