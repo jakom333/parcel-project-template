@@ -1,12 +1,12 @@
 //============== button ==============//
-.primary-button.header {
-  height: 48px;
-  text-align: center;
-  letter-spacing: 0.08em;
-  color: $accent-color;
-  border: 2px solid $accent-color;
-  background-color: transparent;
-}
+// .primary-button.header {
+//   height: 48px;
+//   text-align: center;
+//   letter-spacing: 0.08em;
+//   color: $accent-color;
+//   border: 2px solid $accent-color;
+//   background-color: transparent;
+// }
 
 .primary-button.main {
   display: none;
@@ -33,6 +33,11 @@
   &-container {
     position: relative;
     padding-top: 30px;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &-navigation-container {
     position: relative;

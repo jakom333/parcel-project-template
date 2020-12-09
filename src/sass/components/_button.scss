@@ -1,17 +1,14 @@
-.primary-button {
+.button {
   @include font(12px, 700, 15px);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  min-height: 48px;
+  display: block;
   letter-spacing: inherit;
   line-height: inherit;
-
-  min-width: 260px;
-  min-height: 48px;
   padding: 15px 5px;
-  background-color: $accent-color;
-  color: $white-color;
+  background-color: $white-color;
+
   border: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -28,5 +25,16 @@
     min-width: 354px;
     min-height: 70px;
     letter-spacing: 0.14em;
+    margin: 40px auto 100px 0;
+  }
+}
+
+.button-accent {
+  background-color: $accent-color;
+  margin: 0 auto;
+  color: $white-color;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
   }
 }
