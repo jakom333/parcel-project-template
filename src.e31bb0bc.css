@@ -1515,32 +1515,32 @@ img {
   margin: 0 auto;
 }
 
-.feedbacks-student-photos-list::before,
-.feedbacks-student-photos-list::after {
-  content: "";
-  width: 25px;
+.slick-arrow {
+  width: 20px;
   height: 15px;
   position: absolute;
   bottom: 25px;
-  border: 3px solid #ff6b09;
   box-sizing: border-box;
   cursor: pointer;
+  color: transparent;
+  z-index: 1;
 }
 
-.feedbacks-student-photos-list::before {
+.slick-prev {
   background-image: url("/arrow-1.f340b5b0.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  border: none;
-  left: 40px;
 }
 
-.feedbacks-student-photos-list::after {
-  background-image: url("/arrow-2.aebb3cd3.svg");
+.slick-next {
+  background-image: url("/arrow-1.f340b5b0.svg");
+  transform: rotate(0.5turn);
   background-size: cover;
   background-repeat: no-repeat;
-  border: none;
-  right: 40px;
+}
+
+.slick-arrow::before {
+  content: "";
 }
 
 .feedbacks-photo-svg {
@@ -1636,8 +1636,8 @@ img {
     color: #ff6b09;
   }
 
-  .feedbacks-student-photos-list::before,
-.feedbacks-student-photos-list::after {
+  .slick-arrow::before,
+.slick-arrow::after {
     content: "";
     width: 25px;
     height: 15px;
@@ -1718,8 +1718,8 @@ img {
     color: #ff6b09;
   }
 
-  .feedbacks-student-photos-list::before,
-.feedbacks-student-photos-list::after {
+  .slick-arrow::before,
+.slick-arrow::after {
     content: "";
     width: 25px;
     height: 15px;
@@ -1727,11 +1727,11 @@ img {
     top: 45%;
   }
 
-  .feedbacks-student-photos-list::before {
+  .slick-arrow::before {
     left: 0;
   }
 
-  .feedbacks-student-photos-list::after {
+  .slick-arrow::after {
     right: 0;
   }
 }
