@@ -1,0 +1,121 @@
+.footer {
+  padding-top: 30px;
+  text-align: center;
+  .logo-main {
+    display: none;
+  }
+
+  .logo-mobile.link {
+    display: block;
+    line-height: 0px;
+  }
+
+  &-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21px;
+    @include font(14px, 600 17px);
+    &-tel {
+      color: $primary-text-color;
+      font-style: normal;
+    }
+    &::before {
+      content: '';
+      display: block;
+
+      margin-right: 10px;
+      width: 20px;
+      height: 19px;
+      background-image: url(../images/phone.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &-social-link::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 31px;
+    margin-bottom: 30px;
+    background-image: url(../images/instagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-policy {
+    background-color: $bg-color;
+    &-text {
+      display: block;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      width: 100%;
+      @include font(14px, 500, 28px);
+      color: $text-color;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .logo-main {
+      display: flex;
+    }
+    .logo-mobile-svg {
+      display: none;
+    }
+  }
+
+  .footer {
+    text-align: left;
+    padding: 0;
+    &-container {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    &-contact {
+      display: flex;
+      align-items: center;
+      padding-top: 11px;
+      padding-bottom: 10px;
+      padding-right: 24px;
+      margin: 0;
+      margin-left: auto;
+      @include font(20px, 600, 24px);
+      border-right: 1px solid $secondary-text-color;
+    }
+    &-contact::before {
+      width: 24px;
+      height: 23px;
+      background-size: cover;
+    }
+    &-social-link:after {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .footer {
+    text-align: left;
+    &-container {
+      padding-top: 52px;
+      padding-bottom: 53px;
+    }
+    &-contact {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 16px;
+      margin-left: 290px;
+      @include font(30px, 600, 37px);
+    }
+    &-contact::before {
+      width: 30px;
+      height: 29px;
+    }
+  }
+}

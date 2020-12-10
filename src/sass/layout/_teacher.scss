@@ -1,0 +1,190 @@
+.teacher {
+  padding-top: 270px;
+  padding-bottom: 50px;
+}
+
+.teacher-title {
+  margin-bottom: 20px;
+}
+
+.teacher-title-name {
+  @include font(20px, 800, 24px);
+  margin-bottom: 30px;
+  margin-top: 20px;
+  height: 36px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.teacher-title-list-item::before {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 17px;
+  fill: $accent-color;
+  background-image: url(../images/galochka.svg);
+  flex-shrink: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.teacher-title-list-item-position {
+  position: relative;
+  padding-left: 25px;
+}
+
+.teacher-title-list {
+  margin-bottom: 34px;
+}
+
+.teacher-title-list-item {
+  @include font(14px, 600, 17px);
+  letter-spacing: 0.06em;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  color: $primary-text-color;
+}
+
+.teacher-list-item-dash {
+  height: 32px;
+  color: $accent-color;
+  @include font(20px, 700, 33px);
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teacher-achievements-dach::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 20px;
+  background-color: $accent-color;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.teacher-achievements {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.teacher-achievements-link {
+  color: $accent-color;
+}
+
+@media screen and (min-width: 768px) {
+  .teacher {
+    padding-top: 302px;
+    padding-bottom: 50px;
+  }
+
+  .position {
+    display: flex;
+  }
+
+  .teacher-rigt-side{
+    margin-left: 40px;
+  }
+
+  .teacher-title {
+    @include font(26px, 800, 34px);
+    margin-bottom: 30px;
+  }
+
+  .teacher-title-name {
+    @include font(20px, 800, 34px);
+    margin-bottom: 15px;
+    height: 40px;
+  }
+
+  .teacher-title-list-item {
+    @include font(14px, 600, 17px);
+    letter-spacing: 0.06em;
+    
+  }
+
+  .teacher-title-list-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .teacher-achievements-dach::before {
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+
+
+
+  .teacher-rigt-side {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .teacher {
+    padding-top: 329px;
+    padding-bottom: 130px;
+  }
+
+  .teacher-title-img {
+    height: 300px;
+    width: 400px;
+  }
+
+  .teacher-title {
+    @include font(46px, 800, 60px);
+    margin-bottom: 50px;
+  }
+
+  .teacher-title-name {
+    @include font(30px, 800, 37px);
+    height: 58px;
+  }
+
+  .teacher-title-list-item::before {
+    height: 24px;
+    width: 20px;
+    background-size: cover;
+  }
+
+  .teacher-title-list-item-position {
+    margin-left: 34px;
+  }
+
+  .teacher-rigt-side{
+    margin-left: 31px;
+  }
+
+  .teacher-title-list-item {
+    @include font(16px, 600, 20px);
+    letter-spacing: 0.06em;
+    
+  }
+  .teacher-title-list-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .teacher-achievements-dach::before {
+    
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+
+  .teacher-achievements {
+    @include font(18px, 500, 28px);
+    
+  }
+
+  .teacher-achievements-link {
+    @include font(18px, 500, 28px);
+    
+  }
+
+  .teacher-rigt-side {
+    padding-top: 90px;
+  }
+}
